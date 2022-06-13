@@ -2,12 +2,10 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import dbLista from "./dbListaCards.json";
 import Cards from "./Cards";
-import {
-  corPrimaria,
-  corDestaque,
-  corBranco,
-  fonteMuli,
-} from "../UI/variaveis";
+import Botao from "../components/Button";
+import Input from "../components/Input";
+import NovoCard from "./NovoCard";
+import { corPrimaria, corBranco, fonteMuli } from "../UI/variaveis";
 
 import Fundo from "../img/fundo-busca.png";
 import Lupa from "../img/lupa.svg";
@@ -18,6 +16,9 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  .sumir {
+    transform: translateX(100%);
+  }
 `;
 
 const ContainerBusca = styled(Container)`
@@ -32,23 +33,6 @@ const ContainerBusca = styled(Container)`
     font-family: ${fonteMuli};
     font-size: 32px;
     font-weight: 300;
-  }
-
-  button {
-    width: 173px;
-    height: 48px;
-    color: ${corBranco};
-    font-family: ${fonteMuli};
-    font-weight: 600;
-    background: ${corDestaque} 0% 0% no-repeat padding-box;
-    box-shadow: 0px 3px 6px #92207242;
-    border-radius: 8px;
-    border: none;
-    opacity: 1;
-
-    &:hover {
-      cursor: pointer;
-    }
   }
 `;
 
@@ -90,34 +74,18 @@ const Box = styled.div`
   }
 `;
 
-const Input = styled.input`
-  background-color: ${corBranco};
-  width: 80%;
-  height: 30px;
-  margin: auto 20px;
-  border: 0;
-  font-size: 24px;
-  font-family: ${fonteMuli};
-  font-weight: 100;
-  opacity: 70%;
-  outline: none;
-  &:hover {
-    opacity: 100%;
-    cursor: pointer;
-  }
-`;
-
 export default function Busca() {
-  const [lista, setLista] = useState(dbLista);
+  let lista = dbLista;
   const [listaFilter, setListaFilter] = useState([]);
   const [busca, setBusca] = useState("");
-
-  let listaBusca = [];
+  const [teste, setTeste] = useState(false);
 
   useEffect(() => {
-    listaBusca = lista.filter((item) => item.titulo == busca);
-    setListaFilter(listaBusca);
-  }, [busca]);
+    setListaFilter(
+      // eslint-disable-next-line
+      lista.filter((item) => item.titulo === busca || item.id == busca)
+    );
+  }, [busca, lista]);
 
   return (
     <>
@@ -137,12 +105,13 @@ export default function Busca() {
       <Container>
         <ContainerBusca>
           <h1>Resultado da Busca</h1>
-          <button>Novo Card</button>
+          <Botao text="Novo Card" onClick={() => setTeste(!teste)} />
         </ContainerBusca>
         <ContainerCards>
           {busca ? <Cards itens={listaFilter} /> : <Cards itens={lista} />}
         </ContainerCards>
       </Container>
+      {teste && <NovoCard />}
     </>
   );
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
+import Swal from "sweetalert2";
 import { corBranco, corErro, corFundo, fonteMuli } from "../UI/variaveis";
-
 import IconeLixeira from "../img/Icon-trash.svg";
 import IconeEditar from "../img/Icon-edit.svg";
 import Icone from "../img/icone.svg";
@@ -83,6 +83,10 @@ const Hrg = styled(Hr)`
   margin: 18px 0;
 `;
 
+function Alert() {
+  Swal.fire("Esta funcionalidade ainda não foi implementada");
+}
+
 export default function Cards({ itens }) {
   return (
     <>
@@ -98,12 +102,12 @@ export default function Cards({ itens }) {
             <CardBase>
               <DivOpcoes>
                 <img src={IconeLixeira} alt="Icone Lixeira" />
-                <p>Excluir</p>
+                <p onClick={Alert}>Excluir</p>
               </DivOpcoes>
 
               <DivOpcoes>
                 <img src={IconeEditar} alt="Icone Editar" />
-                <p>Editar</p>
+                <p onClick={Alert}>Editar</p>
               </DivOpcoes>
             </CardBase>
           </div>

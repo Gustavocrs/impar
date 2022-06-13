@@ -8,8 +8,7 @@ function App() {
     <>
       <GlobalStyle />
       <Navbar />
-      <Busca/>
-      
+      <Busca/>      
     </>
   );
 }

@@ -5,6 +5,7 @@ export const corSecundaria = "#AE276F";
 export const corDestaque = "#E76316";
 export const corBranco = "#FFFFFF";
 export const corErro = "#DB2525";
+export const corTexto = "#454545"
 
 
 /*FONTES*/

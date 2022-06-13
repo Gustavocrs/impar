@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { corFundo } from "../UI/variaveis";
+import { corFundo, fonteMuli } from "../UI/variaveis";
 
 export const GlobalStyle = createGlobalStyle`
   *{
@@ -10,5 +10,10 @@ export const GlobalStyle = createGlobalStyle`
 
   html{
     background-color: ${corFundo};
+  }
+
+  .swal2-popup {
+    font-size: 0.8rem !important;
+    font-family: ${fonteMuli} !important;
   }
 `;
