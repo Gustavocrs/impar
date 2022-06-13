@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import dbLista from "./dbListaCards.json";
 import Cards from "./Cards";
@@ -76,16 +76,15 @@ const Box = styled.div`
 
 export default function Busca() {
   let lista = dbLista;
-  const [listaFilter, setListaFilter] = useState([]);
   const [busca, setBusca] = useState("");
   const [teste, setTeste] = useState(false);
 
-  useEffect(() => {
-    setListaFilter(
+  const listaFiltrada = lista.filter(
+    (item) =>
+      item.titulo.toLocaleLowerCase().includes(busca.toLocaleLowerCase()) ||
       // eslint-disable-next-line
-      lista.filter((item) => item.titulo === busca || item.id == busca)
-    );
-  }, [busca, lista]);
+      item.id == busca
+  );
 
   return (
     <>
@@ -108,7 +107,7 @@ export default function Busca() {
           <Botao text="Novo Card" onClick={() => setTeste(!teste)} />
         </ContainerBusca>
         <ContainerCards>
-          {busca ? <Cards itens={listaFilter} /> : <Cards itens={lista} />}
+          {busca ? <Cards itens={listaFiltrada} /> : <Cards itens={lista} />}
         </ContainerCards>
       </Container>
       {teste && <NovoCard />}
