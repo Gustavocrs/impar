@@ -3,7 +3,7 @@ import { corPrimaria, corSecundaria } from "../UI/variaveis";
 import { fonteMuli } from "../UI/variaveis";
 import Logo from "../img/logo-teste.svg";
 
-const Nav = styled.nav`
+const Header = styled.header`
   background: transparent
     linear-gradient(272deg, ${corSecundaria} 0%, ${corPrimaria} 100%) 0% 0%
     no-repeat padding-box;
@@ -23,9 +23,9 @@ const Nav = styled.nav`
 export default function Navbar() {
   return (
     <>
-      <Nav>
+      <Header>
         <img src={Logo} alt="Logo" />
-      </Nav>
+      </Header>
     </>
   );
 }

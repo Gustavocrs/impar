@@ -1,13 +1,13 @@
-import Busca from "./components/Busca";
-import { GlobalStyle } from "./components/GlobalStyle";
-import Navbar from "./components/Navbar";
+import Busca from "./pages/Busca";
+import { GlobalStyle } from "./UI/GlobalStyle";
+import Header from "./components/Header";
 
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Navbar />
+      <Header />
       <Busca/>      
     </>
   );

@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { corFundo, fonteMuli } from "../UI/variaveis";
+import { corFundo, fonteMuli } from "./variaveis";
 
 export const GlobalStyle = createGlobalStyle`
   *{
