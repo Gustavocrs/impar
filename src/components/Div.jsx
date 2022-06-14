@@ -22,5 +22,6 @@ export const DivCriar = styled.div`
 export const Section = styled.section`
   .esconder {
     transform: translateX(100%);
+    display: none;
   }
 `;
