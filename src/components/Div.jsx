@@ -6,12 +6,18 @@ export const DivTransparente = styled.div`
   width: 55%;
   height: 100vh;
   opacity: 70%;
+  @media screen and (max-width: 480px) {
+    width: 10%;
+  }
 `;
 
 export const DivCriar = styled.div`
   background-color: ${corBranco};
   width: 45%;
   padding: 30px;
+  @media screen and (max-width: 480px) {
+    width: 90%;
+  }
 
   div {
     display: flex;

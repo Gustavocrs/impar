@@ -19,8 +19,8 @@ export const ContainerBusca = styled(Container)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 70%;
-  margin-bottom: 15px;
+  width: 80%;
+  margin: 25px 0;
 
   h1 {
     color: ${corPrimaria};
@@ -35,7 +35,7 @@ export const ContainerCards = styled(Container)`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  width: 80%;
+  width: 100%;
 `;
 
 export const ContainerNovoCard = styled.div`
@@ -59,10 +59,8 @@ export const ContainerNovoCard = styled.div`
 export const Box = styled.div`
   background: transparent url(${Fundo}) 0% 0% no-repeat padding-box;
   background-size: cover;
-  background-position: 0 -70px;
   width: 100%;
   height: 240px;
-  margin-top: 63px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -73,11 +71,9 @@ export const Box = styled.div`
     align-items: center;
     border-radius: 8px;
     background-color: ${corBranco};
-    margin-bottom: 75px;
-    top: 147px;
-    left: 168px;
-    width: 1046px;
+    width: 80%;
     height: 75px;
+    margin: 0 0 35px 0;
     cursor: pointer;
   }
 
