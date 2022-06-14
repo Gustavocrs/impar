@@ -94,6 +94,7 @@ export default function Cards({ itens }) {
         <Container key={index}>
           <div>
             <CardTopo>
+              <p>{item.id}</p>
               <img src={Icone} alt="Icone" />
               <Hr />
               <p>{item.titulo}</p>

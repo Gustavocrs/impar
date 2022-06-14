@@ -41,7 +41,7 @@ export default function Busca() {
           <div>
             <Input
               type="text"
-              placeholder="Digite aqui sua busca..."
+              placeholder="Digite aqui o nome ou o id..."
               value={busca}
               onChange={(e) => setBusca(e.target.value)}
             />
