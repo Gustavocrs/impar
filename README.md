@@ -30,5 +30,5 @@
 1 - No console, digite o comando abaixo para clonar o projeto.</br>
 2 - git clone https://github.com/Gustavocrs/impar </br>
 3 - Após concluir a etapa de clonagem, basta navegar até a pasta raiz do projeto e baixar as dependencias do Node com o comando abaixo</br>
-4 - npm install</br>
+4 - npm install react-icons styled-components --save react-toastify</br>
 </p>
