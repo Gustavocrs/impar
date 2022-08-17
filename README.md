@@ -26,9 +26,8 @@
   <li>sweetalert2</li>
 </ul>
 
-<h3>Clonando o Projeto</h3>
-1 - No console, digite o comando abaixo para clonar o projeto.</br>
-2 - git clone https://github.com/Gustavocrs/impar </br>
-3 - Após concluir a etapa de clonagem, basta navegar até a pasta raiz do projeto e baixar as dependencias do Node com o comando abaixo</br>
-4 - npm install react-icons styled-components --save react-toastify</br>
+<h3>Instalando o Projeto</h3>
+1 - git clone https://github.com/Gustavocrs/impar</br>
+2 - npm install react-icons styled-components sweetalert2</br>
+3 - npm start</br>
 </p>
